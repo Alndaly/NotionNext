@@ -75,7 +75,8 @@ const Header = props => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
           const currentScrollY = window.scrollY
-          if (currentScrollY > prevScrollY) {
+          // >0的目的是为了防止浏览器滑动到顶部时的自动回弹
+          if (currentScrollY > prevScrollY && currentScrollY > 0) {
             setActiveIndex(1) // 向下滚动时设置activeIndex为1
           } else {
             setActiveIndex(0) // 向上滚动时设置activeIndex为0

@@ -11,7 +11,7 @@ import formatDate from '@/lib/utils/formatDate'
  * @returns
  */
 export const BlogPostCardInfo = ({ post, showPreview, showPageCover, showSummary }) => {
-  return <div className={`flex flex-col justify-between lg:p-6 p-4  ${showPageCover && !showPreview ? 'md:w-7/12 w-full md:max-h-60' : 'w-full'}`}>
+  return <div className={`flex flex-col justify-between lg:p-4 p-2  ${showPageCover && !showPreview ? 'md:w-7/12 w-full md:max-h-60' : 'w-full'}`}>
        <div>
          {/* 标题 */}
          <Link
