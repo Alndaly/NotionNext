@@ -39,7 +39,7 @@ const GiscusComponent = () => {
       data-input-position={siteConfig('COMMENT_GISCUS_INPUT_POSITION')}
       data-theme={theme}
       data-lang={siteConfig('COMMENT_GISCUS_LANG')}
-      data-loading={siteConfig('COMMENT_GISCUS_LOADING')}
+      // data-loading={siteConfig('COMMENT_GISCUS_LOADING')}
       //   crossorigin={siteConfig('COMMENT_GISCUS_CROSSORIGIN')}
     ></div>
   )
