@@ -4,19 +4,12 @@ import SocialButton from './SocialButton'
 const Footer = ({ title }) => {
   const since = siteConfig('SINCE')
   return (
-    <footer className='relative flex-shrink-0 bg-white dark:bg-[#1a191d] justify-center text-center m-auto w-full leading-6  text-gray-600 dark:text-gray-100 text-sm'>
-      {/* 颜色过度区 */}
-      <div
-        id='color-transition'
-        className='h-32 bg-gradient-to-b from-[#f7f9fe] to-white  dark:bg-[#1a191d] dark:from-inherit dark:to-inherit'
-      />
+    <footer className='relative flex-shrink-0 justify-center text-center m-auto w-full leading-6  text-gray-600 dark:text-gray-100 text-sm'>
 
       {/* 社交按钮 */}
-      <div className='w-full h-24'>
+      <div className='w-full p-10'>
         <SocialButton />
       </div>
-
-      <br />
 
       {/* 底部页面信息 */}
       <div
