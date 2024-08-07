@@ -18,14 +18,14 @@ export const MenuItemDrop = ({ link }) => {
         <Link
           target={link?.target}
           href={link?.href}
-          className=' hover:bg-black hover:bg-opacity-10 rounded-2xl flex justify-center items-center px-3 py-1 no-underline tracking-widest'>
+          className='hover:bg-[#425aef] hover:text-white rounded-full flex justify-center items-center px-3 py-1 no-underline tracking-widest'>
           {link?.icon && <i className={link?.icon} />} {link?.name}
         </Link>
       )}
       {/* 含子菜单的按钮 */}
       {hasSubMenu && (
         <>
-          <div className='cursor-pointer  hover:bg-black hover:bg-opacity-10 rounded-2xl flex justify-center items-center px-3 py-1 no-underline tracking-widest'>
+          <div className='cursor-pointer hover:bg-[#425aef] hover:text-white rounded-full flex justify-center items-center px-3 py-1 no-underline tracking-widest'>
             {link?.icon && <i className={link?.icon} />} {link?.name}
           </div>
         </>
@@ -33,8 +33,7 @@ export const MenuItemDrop = ({ link }) => {
       {/* 子菜单 */}
       {hasSubMenu && (
         <ul
-          style={{ backdropFilter: 'blur(3px)' }}
-          className={`${show ? 'visible opacity-100 top-14' : 'invisible opacity-0 top-20'} drop-shadow-md overflow-hidden rounded-xl bg-white dark:bg-[#1e1e1e] transition-all duration-300 z-20 absolute`}>
+          className={`${show ? 'visible opacity-100 top-14' : 'invisible opacity-0 top-20'} bg-transparent drop-shadow-md backdrop-blur-md overflow-hidden rounded-lg border-[#425aef] border bg-white transition-all duration-300 z-20 absolute`}>
           {link.subMenus.map((sLink, index) => {
             return (
               <li
