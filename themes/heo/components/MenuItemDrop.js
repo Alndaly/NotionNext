@@ -11,6 +11,7 @@ export const MenuItemDrop = ({ link }) => {
 
   return (
     <div
+      className='relative'
       onMouseOver={() => changeShow(true)}
       onMouseOut={() => changeShow(false)}>
       {/* 不含子菜单 */}
@@ -33,12 +34,12 @@ export const MenuItemDrop = ({ link }) => {
       {/* 子菜单 */}
       {hasSubMenu && (
         <ul
-          className={`${show ? 'visible opacity-100 top-14' : 'invisible opacity-0 top-20'} bg-transparent drop-shadow-md backdrop-blur-md overflow-hidden rounded-lg border-[#425aef] border bg-white transition-all duration-300 z-20 absolute`}>
+          className={`${show ? 'visible opacity-100 top-12' : 'invisible opacity-0 top-16'} left-[50%] -translate-x-1/2 flex flex-row drop-shadow-md backdrop-blur-md overflow-hidden rounded-full border-[#425aef] border bg-white/40 dark:bg-black/40 transition-all duration-300 z-20 absolute`}>
           {link.subMenus.map((sLink, index) => {
             return (
               <li
                 key={index}
-                className='cursor-pointer hover:bg-blue-600 dark:hover:bg-yellow-600 hover:text-white text-gray-900 dark:text-gray-100  tracking-widest transition-all duration-200 py-1 pr-6 pl-3'>
+                className='cursor-pointer hover:bg-blue-600 dark:hover:bg-yellow-600 hover:text-white text-gray-900 dark:text-gray-100  tracking-widest transition-all duration-200 py-1 px-6'>
                 <Link href={sLink.href} target={link?.target}>
                   <span className='text-sm text-nowrap font-extralight'>
                     {link?.icon && <i className={sLink?.icon}> &nbsp; </i>}
