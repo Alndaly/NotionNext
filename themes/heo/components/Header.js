@@ -159,9 +159,12 @@ const Header = props => {
             </div>
             <div
               className={`absolute transition-all duration-700 ${activeIndex === 1 ? 'opacity-100 mb-0' : '-mb-20 opacity-0 invisible'}`}>
-              <h1 className='font-bold text-center text-light-400 dark:text-gray-400'>
-                {siteConfig('AUTHOR') || siteConfig('TITLE')}{' '}
-                {siteConfig('BIO') && <>|</>} {siteConfig('BIO')}
+              <h1 className='font-bold text-center text-light-400 dark:text-gray-400 flex flex-row gap-2'>
+                {siteConfig('AUTHOR') || siteConfig('TITLE')}
+                {siteConfig('BIO') && <div>|</div>}
+                <div className='line-clamp-1'>
+                  {siteConfig('BIO')}
+                </div>
               </h1>
             </div>
           </div>
