@@ -17,8 +17,8 @@ const CONFIG = {
   HEO_HERO_TITLE_1: '分享技术',
   HEO_HERO_TITLE_2: '与思维认知',
   HEO_HERO_TITLE_3: 'huaqinda.com',
-  HEO_HERO_TITLE_4: '社群交流',
-  HEO_HERO_TITLE_5: '加入社群一起聊聊感兴趣的事情',
+  HEO_HERO_TITLE_4: '不管你是新手还是老手，欢迎来到这里',
+  HEO_HERO_TITLE_5: '一起来聊ai相关的话题吧！',
   HEO_HERO_TITLE_LINK: 'https://huaqinda.com/group',
 
   // 英雄区显示三个置顶分类
