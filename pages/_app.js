@@ -6,6 +6,8 @@ import '@/styles/utility-patterns.css'
 import '@/styles/notion.css' //  重写部分notion样式
 import 'react-notion-x/src/styles.css' // 原版的react-notion-x
 
+import { Analytics } from "@vercel/analytics/react"
+
 import useAdjustStyle from '@/hooks/useAdjustStyle'
 import { GlobalContextProvider } from '@/lib/global'
 import { getGlobalLayoutByTheme } from '@/themes/theme'
@@ -53,6 +55,7 @@ const MyApp = ({ Component, pageProps }) => {
         <Component {...pageProps} />
       </GLayout>
       <ExternalPlugins {...pageProps} />
+      <Analytics />
     </GlobalContextProvider>
   )
 }
